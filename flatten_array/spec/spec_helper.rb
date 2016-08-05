@@ -1,1 +1,1 @@
-require_relative '../lib/flatten'
+require_relative '../lib/core_ext/array'

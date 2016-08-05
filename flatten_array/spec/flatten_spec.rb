@@ -7,7 +7,7 @@ fixtures = [
 ]
 
 describe Array do
-  describe '.flatten1' do
+  describe '.my_flatten' do
     fixtures.each do |fixture|
       it 'returns a flatten Array' do
         expect(fixture.my_flatten).to eq(fixture.flatten)
