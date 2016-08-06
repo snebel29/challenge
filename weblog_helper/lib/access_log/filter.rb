@@ -8,8 +8,8 @@ module AccessLog
     def by_ip(ip)
       address = IPAddr.new(ip)
       File.open(@log_file).each do |line|
-        request_ips = [line.split[0]]
-        puts line if request_ips.any? { |ip| address.include?(ip) }
+        request_ip = line.split[0]
+        puts line if address.include?(request_ip)
       end
     end
   end
