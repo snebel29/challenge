@@ -8,8 +8,7 @@ module AccessLog
     def by_ip(ip)
       address = IPAddr.new(ip)
       File.open(@log_file).each do |line|
-        # Fetch possible proxied ip addresses
-        request_ips = line.split[0].split(',').map(&:strip)
+        request_ips = [line.split[0]]
         puts line if request_ips.any? { |ip| address.include?(ip) }
       end
     end

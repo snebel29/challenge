@@ -2,7 +2,7 @@ require_relative '../spec_helper'
 
 real_access_log = File.join(File.dirname(__FILE__), '../..', 'data/public_access.log.txt')
 fixtures_access_log = File.join(File.dirname(__FILE__),'fixtures_access_log.txt')
-fixtures = YAML.load(File.open(File.join(File.dirname(__FILE__),'resources.yaml')))
+fixtures = YAML.load(File.open(File.join(File.dirname(__FILE__),'ip_output_tests.yaml')))
 
 puts fixtures_access_log
 
